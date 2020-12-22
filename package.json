@@ -1,0 +1,24 @@
+{
+  "name": "discordjs-utils",
+  "version": "1.0.0",
+  "description": "The all in one utility package for Discord.js",
+  "main": "src/Client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CM8DoubleCheck/discordjs-utils.git"
+  },
+  "keywords": [],
+  "author": "DoubleCheck",
+  "license": "MIT",
+  "dependencies": {
+    "discord-slash-commands-client": "^1.0.3",
+    "discord.js": "git+https://github.com/MatteZ02/discord.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CM8DoubleCheck/discordjs-utils/issues"
+  },
+  "homepage": "https://github.com/CM8DoubleCheck/discordjs-utils#readme"
+}
