@@ -46,7 +46,7 @@ The idea of this utility package is to provide not only an improved way of handl
 | bot.client | Discord.JS' client variable         |
 | bot.embed  | Discord.JS' MessageEmbed class      |
 | bot.config | Config provided at initialization   |
-| bot.logger | See "Accessing the internal logger" |
+| bot.logger | See [Accessing the internal logger](https://github.com/CM8DoubleCheck/discordjs-utils#accessing-the-internal-logger) |
 
 ### Functions
 
