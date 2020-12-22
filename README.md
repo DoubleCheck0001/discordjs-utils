@@ -2,7 +2,7 @@
 *The all-in-one utility package for Discord.js*
 
 ## Getting Started
-This package is meant to be a replacement of Discord.JS. All of Discord.JS' features are accessible through this package.
+This package is meant to be a replacement of Discord.js. All of Discord.js' functions and variables are still accessible through the API, however.
 ### Installing
 ```bash
 npm i https://github.com/CM8DoubleCheck/discordjs-utils
@@ -38,13 +38,12 @@ bot.commands.on("ping", (event) => { //Handle ping command
 ```
 
 ## API
-The idea of this utility package is to provide not only an improved way of handling commands but to provide more expansive methods for interacting with the Discord API. Because the package is based off Discord.JS, it comes with the already expansive library provided by that package.
-
+The idea of this utility package is to provide a more expansive set of functions on  top of Discord.js. At its core, however, it is still Discord.js and all functions and variables of Discord.js can still be accessed and used.
 #### The `bot` variable
 | Variable   | Function                            |
 |------------|-------------------------------------|
-| bot.client | Discord.JS' client variable         |
-| bot.embed  | Discord.JS' MessageEmbed class      |
+| bot.client | Discord.js' client variable         |
+| bot.embed  | Discord.js' MessageEmbed class      |
 | bot.config | Config provided at initialization   |
 | bot.logger | See [Accessing the internal logger](https://github.com/CM8DoubleCheck/discordjs-utils#accessing-the-internal-logger) |
 
@@ -144,7 +143,7 @@ bot.commands.on("COMMAND", (event) => {
 ```javascript
 bot.on("join", (member) => {
     // User joined Server
-    // member callback variable is left unchanged from Discord.JS
+    // member callback variable is left unchanged from Discord.js
 });
 ```
 #### Guild Member Leave
@@ -153,7 +152,7 @@ bot.on("join", (member) => {
 ```javascript
 bot.on("leave", (member) => {
     // User joined Server
-    // member callback variable is left unchanged from Discord.JS
+    // member callback variable is left unchanged from Discord.js
 });
 ```
 
@@ -161,7 +160,7 @@ bot.on("leave", (member) => {
 *Called when a member receives a role*
 ```javascript
 bot.roles.on("added", (member, addedRoles) =>  {
-    // member callback variable is left unchanged from Discord.JS
+    // member callback variable is left unchanged from Discord.js
     // addedRoles is an array of roles added
 });
 ```
@@ -169,7 +168,7 @@ bot.roles.on("added", (member, addedRoles) =>  {
 *Called when a member receives a role*
 ```javascript
 bot.roles.on("removed", (member, removedRoles) =>  {
-    // member callback variable is left unchanged from Discord.JS
+    // member callback variable is left unchanged from Discord.js
     // removedRoles is an array of roles removed
 });
 ```
