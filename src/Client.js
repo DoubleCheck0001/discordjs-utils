@@ -19,12 +19,38 @@ class Client extends Utils {
         client.once('ready', () => {
             this.logger.info("Done.")
             this.emit('ready');
-
         });
 
+        //Variable  setup
+        this.Embed = discord.MessageEmbed;
+        this.config = config;
+        this.client = client;
+
         // General purpose functions
+        this.setActivity = function (type, activity, callback) {
+            if (client) {
+                client.user.setActivity(activity, {type: type})
+                    .then(presence => callback(null, presence))
+                    .catch(error => callback(error));
+            } else {
+                callback("Bot not logged in");
+            }
+        }
         this.split = function (content) {
             return content.split(/ +/);
+        }
+        this.guild = function (id, callback) {
+            //returns guild if the bot is a member
+            if (client) {
+                const guild = client.guilds.cache.get(id);
+                if (guild) {
+                    callback(null, guild);
+                } else {
+                    callback("Guild not found");
+                }
+            } else {
+                callback("Bot not logged in");
+            }
         }
 
 
