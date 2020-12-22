@@ -8,7 +8,7 @@ class Client extends Utils {
         const client = new discord.Client();
 
         client.login(config.token).then(() => {
-            this.logger.info("Bot authenticated.");
+            this.logger.info(`Bot logged in as ${client.user.username}#${client.user.discriminator}`);
             this.interactionsClass.init(config.token, client.user.id);
             this.interactions = this.interactionsClass.get();
             this.emit("authenticated");
@@ -87,7 +87,7 @@ class Client extends Utils {
             if (this.interactions.commands.get(command)) {
                 //command exists
                 if (cooldown.has(interaction.author.id)) {
-                    interaction.channel.send(interaction.member+", you must wait `" + config.cooldown + "s` between commands.").then(() => {
+                    interaction.channel.send("<@"+interaction.author+">, you must wait `" + config.cooldown + "s` between commands.").then(() => {
                         this.logger.warn(`${interaction.author.username}#${interaction.author.discriminator} (${interaction.author.id}) issued command too quickly: ${command} ${content}`)
                     }).catch(console.log);
                 } else {
