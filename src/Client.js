@@ -92,7 +92,7 @@ class Client extends Utils {
                     }).catch(console.log);
                 } else {
                     cooldown.add(interaction.author.id);
-                    const utils = {
+                    const event = {
                         getRaw: function () {
                             return interaction;
                         },
@@ -129,7 +129,7 @@ class Client extends Utils {
                             return content;
                         }
                     }
-                    this.commands.emit(command, utils);
+                    this.commands.emit(command, event);
                     setTimeout(() => {
                         //Removes the user from the set after the cooldown.
                         cooldown.delete(interaction.author.id);
@@ -155,7 +155,7 @@ class Client extends Utils {
                             cooldown.add(message.author.id);
                             content = content.slice(command.length).trim();
                             this.logger.info(`${message.author.username}#${message.author.discriminator} (${message.author.id}) issued command: ${message.content}`)
-                            const utils = {
+                            const event = {
                                 getRaw: function() {
                                     return message;
                                 },
@@ -183,7 +183,7 @@ class Client extends Utils {
                                 },
 
                             }
-                            this.commands.emit(command, utils);
+                            this.commands.emit(command, event);
                         }
                         setTimeout(() => {
                             //Removes the user from the set after the cooldown.
