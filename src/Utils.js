@@ -7,17 +7,17 @@ class Utils extends Events {
         //Logging
         const logger = {
             info: function(msg) {
-                if (config.debug) {
+                if (config.logging) {
                     console.log(`[INFO] ${msg}`);
                 }
             },
             warn: function(msg) {
-                if (config.debug) {
+                if (config.logging) {
                     console.warn(`[WARN] ${msg}`);
                 }
             },
             error: function(msg) {
-                if (config.debug) {
+                if (config.logging) {
                     console.error(`[ERROR] ${msg}`);
                 }
             }
@@ -26,10 +26,14 @@ class Utils extends Events {
 
         //Interactions API
         let interactions;
-        this.interactions = [ interactions ];
-        this.interactions.init = function(token, ClientID) {
-            interactions = new Interactions(token, ClientID);
-            logger.info("Initialized Interactions class.");
+        this.interactionsClass = {
+            get: function() {
+               return interactions;
+            },
+            init: function(token, ClientID) {
+                interactions = new Interactions(token, ClientID);
+                logger.info("Initialized Interactions class.");
+            }
         }
     }
 }
