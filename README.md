@@ -139,7 +139,7 @@ bot.commands.on("COMMAND", (event) => {
 | event.getContent() | Returns the string after the command                      |
 
 #### Guild Member Join
-*User joined server event*
+*User joined a server event*
 
 ```javascript
 bot.on("join", (member) => {
@@ -148,7 +148,7 @@ bot.on("join", (member) => {
 });
 ```
 #### Guild Member Leave
-*User left server event*
+*User left a server event*
 
 ```javascript
 bot.on("leave", (member) => {
@@ -158,7 +158,7 @@ bot.on("leave", (member) => {
 ```
 
 #### Role Added
-*Called when a member's receives a role*
+*Called when a member receives a role*
 ```javascript
 bot.roles.on("added", (member, addedRoles) =>  {
     // member callback variable is left unchanged from Discord.JS
@@ -166,7 +166,7 @@ bot.roles.on("added", (member, addedRoles) =>  {
 });
 ```
 #### Role Removed
-*Called when a member's receives a role*
+*Called when a member receives a role*
 ```javascript
 bot.roles.on("removed", (member, removedRoles) =>  {
     // member callback variable is left unchanged from Discord.JS
