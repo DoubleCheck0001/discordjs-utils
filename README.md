@@ -165,7 +165,7 @@ bot.roles.on("added", (member, addedRoles) =>  {
 });
 ```
 #### Role Removed
-*Called when a member receives a role*
+*Called when a member loses a role*
 ```javascript
 bot.roles.on("removed", (member, removedRoles) =>  {
     // member callback variable is left unchanged from Discord.js
