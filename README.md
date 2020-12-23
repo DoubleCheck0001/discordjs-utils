@@ -43,7 +43,7 @@ The idea of this utility package is to provide a more expansive set of functions
 | Variable   | Function                            |
 |------------|-------------------------------------|
 | bot.client | Discord.js' client variable         |
-| bot.embed  | Discord.js' MessageEmbed class      |
+| bot.Embed  | Discord.js' MessageEmbed class      |
 | bot.config | Config provided at initialization   |
 | bot.logger | See [Accessing the internal logger](https://github.com/CM8DoubleCheck/discordjs-utils#accessing-the-internal-logger) |
 
