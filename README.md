@@ -71,7 +71,7 @@ bot.setActivity("WATCHING", "for -ping", (err, presence)  => {
 });
 ```
 
-#### Registering a test command
+#### Registering a text command
 ```javascript
 bot.registerCommand("text", "{name}");
 ```
